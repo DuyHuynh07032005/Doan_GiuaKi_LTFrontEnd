@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"content="width=device-width, initial-scale=1.0">
+    <title>TETRIS</title>
+    <link rel ="stylesheet" href="style.css">
+    <link rel ="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+<main class="tetris-card">
+
+ <section class="board-column">
+ <div class="board-frame">
+ <div id="board" class="board">
+ </div>
+
+     <div id="message-overlay" class="message-overlay">
+         <div class="message-box">
+             <div id="message-text">GAME OVER</div>
+         </div>
+     </div>
+ </div>
+ </section>
+
+    <aside class="side-column">
+        <header class="header">
+            <h1 class="title">TETRIS</h1>
+            <div class="subtitle" id="level-val">LEVEL 1</div>
+        </header>
+
+        <section class="stats-card">
+            <div class="stat-row">
+                <span class="stat-label">SCORE</span>
+                <span class="stat-value" id="score-val">0</span>
+            </div>
+            <div class="stat-row">
+                <span class="stat-label">LINES</span>
+                <span class="stat-value" id="lines-val">0</span>
+            </div>
+            <div class="stat-row">
+                <span class="stat-label">COMBO</span>
+                <span class="stat-value" id="combo-val">—</span>
+            </div>
+        </section>
+
+        <section class="button-group">
+            <button id="btn-start" class="action-btn btn-primary" title="Bắt đầu ván mới">[ START ]</button>
+            <div class="sub-buttons">
+                <button id="btn-pause" class="action-btn" title="Tạm dừng / Tiếp tục">[ PAUSE ]</button>
+                <button id="btn-restart" class="action-btn" title="Chơi lại từ đầu">[ RESET ]</button>
+            </div>
+        </section>
+
+        <footer class="controls-card">
+            <div class="controls-title">HƯỚNG DẪN</div>
+            <div class="control-row">
+                <span class="key-combo"><kbd>←</kbd> <kbd>→</kbd></span>
+                <span class="key-name">Di chuyển</span>
+            </div>
+            <div class="control-row">
+                <span class="key-combo"><kbd>↓</kbd></span>
+                <span class="key-name">Rơi nhanh</span>
+            </div>
+            <div class="control-row">
+                <span class="key-combo"><kbd>↑</kbd></span>
+                <span class="key-name">Xoay gạch</span>
+            </div>
+            <div class="control-row">
+                <span class="key-combo"><kbd>Space</kbd></span>
+                <span class="key-name">Rơi tức thì</span>
+            </div>
+        </footer>
+    </aside>
+
+</main>
+<script src="js/constants.js"></script>
+<script src="js/audio.js"></script>
+<script src="js/game.js"></script>
+</body>
+</html>

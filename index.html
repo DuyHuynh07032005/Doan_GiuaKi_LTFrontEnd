@@ -2,32 +2,49 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TETRIS</title>
-    <link rel ="stylesheet" href="style.css">
-    <link rel ="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
-
-
 </head>
 <body>
+
+<section id="level-menu" class="level-menu">
+    <div class="level-menu-panel">
+        <p class="menu-kicker">TETRIS ARCADE</p>
+        <h1>CHỌN CẤP ĐỘ</h1>
+        <p class="menu-description">Chọn một cấp để bắt đầu chơi ngay.</p>
+        <div class="level-options">
+            <button class="level-option level-one" data-level="1"><span class="level-number">01</span><strong>LEVEL 1</strong><small>Cơ bản · Bàn 10 × 20</small></button>
+            <button class="level-option level-two" data-level="2"><span class="level-number">02</span><strong>LEVEL 2</strong><small>Khối đặc biệt</small></button>
+            <button class="level-option level-three" data-level="3"><span class="level-number">03</span><strong>LEVEL 3</strong><small>Bàn rộng hơn · Khối mới</small></button>
+            <button class="level-option level-four" data-level="4"><span class="level-number">04</span><strong>LEVEL 4</strong><small>Chướng ngại vật</small></button>
+            <button class="level-option level-five" data-level="5"><span class="level-number">05</span><strong>LEVEL 5</strong><small>Đếm giờ · Đổi trọng lực</small></button>
+        </div>
+        <p class="menu-note">Thua thì có thể chơi lại cấp đang chọn hoặc quay về đây để đổi cấp.</p>
+    </div>
+</section>
+
+
 <main class="tetris-card">
 
- <section class="board-column">
- <div class="board-frame">
- <div id="board" class="board">
- </div>
+    <section class="board-column">
+        <div class="board-frame">
+            <div id="board" class="board">
+            </div>
 
-     <div id="message-overlay" class="message-overlay">
-         <div class="message-box">
-             <div id="message-text">GAME OVER</div>
-         </div>
-     </div>
- </div>
- </section>
+            <div id="message-overlay" class="message-overlay">
+                <div class="message-box">
+                    <div id="message-text">GAME OVER</div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <aside class="side-column">
+        <!-- 1. Tiêu đề -->
         <header class="header">
             <h1 class="title">TETRIS</h1>
             <div class="subtitle" id="level-val">LEVEL 1</div>
@@ -52,8 +69,9 @@
             <button id="btn-start" class="action-btn btn-primary" title="Bắt đầu ván mới">[ START ]</button>
             <div class="sub-buttons">
                 <button id="btn-pause" class="action-btn" title="Tạm dừng / Tiếp tục">[ PAUSE ]</button>
-                <button id="btn-restart" class="action-btn" title="Chơi lại từ đầu">[ RESET ]</button>
+                <button id="btn-restart" class="action-btn" title="Chơi lại cấp đang chọn">[ RESET ]</button>
             </div>
+            <button id="btn-level-menu" class="action-btn btn-back-menu" type="button" title="Thoát ván và quay về chọn cấp độ">[ QUAY VỀ CHỌN CẤP ĐỘ ]</button>
         </section>
 
         <footer class="controls-card">
@@ -78,6 +96,7 @@
     </aside>
 
 </main>
+
 <script src="js/constants.js"></script>
 <script src="js/audio.js"></script>
 <script src="js/game.js"></script>
